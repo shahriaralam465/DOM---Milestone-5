@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+</head>
+
+<body>
+    <h1 id="hide-title">Information about DOM</h1>
+
+    <input placeholder="Please type delete" type="text" id="delete-confirm">
+    <button id="btn-delete" disabled>Delete</button>
+
+    <script>
+        // Here "Please type delete" working
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const deleteBtn = document.getElementById('btn-delete');
+            if(text === 'delete'){
+                deleteBtn.removeAttribute('disabled');
+            }
+            else{
+                deleteBtn.setAttribute('disabled', true)
+            }
+        })
+
+
+        // Here Delete The text condition are work
+        document.getElementById('btn-delete').addEventListener('click', function () {
+            const hide = document.getElementById('hide-title');
+            hide.style.display = 'none';
+        });
+
+
+
+    </script>
+</body>
+
+</html>

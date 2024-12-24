@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+</head>
+
+<body>
+    <h1 id="deletable-text">This Text will delete when u click Delete button</h1>
+
+    <input type="text" placeholder="Please type 'delete'" id="confirmation-text">
+    <button id="dlt-btn" disabled>Delete</button>
+
+
+
+
+    <script>
+        // "delete" disable enable
+        document.getElementById('confirmation-text').addEventListener('keyup', function(event){
+            const txt = event.target.value;
+            const deleteBtn = document.getElementById('dlt-btn');
+
+            if(txt === 'delete'){
+                deleteBtn.removeAttribute('disabled');
+            }
+            else{
+                deleteBtn.setAttribute('disabled', true);
+            }
+        })
+
+
+        // delete the text
+        document.getElementById('dlt-btn').addEventListener('click', function () {
+            const dlt = document.getElementById('deletable-text');
+            dlt.style.display = 'none';
+        })
+    </script>
+</body>
+
+</html>
