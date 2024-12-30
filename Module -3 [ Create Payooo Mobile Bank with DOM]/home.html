@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo home page</title>
+  <!-- daisy ui  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <main class="flex justify-center">
+    <div class="mockup-phone border-primary">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-3">
+
+          <!-- available balance -->
+          <div>
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="account-balance" class="stat-value">1200</div>
+                <div class="stat-desc">Now, Your total balance</div>
+              </div>
+            </div>
+          </div>
+          <!-- divider -->
+          <div class="divider"></div>
+          <!-- user action -->
+          <div class="flex flex-row flex-nowrap gap-5">
+            <button id="show-btn-add-money" class="btn">Add Money</button>
+            <button id="show-btn-cash-out" class="btn">Cash Out</button>
+            <button id="show-btn-transfer-money" class="btn">Transfer Money</button>
+          </div>
+          <!-- divider -->
+          <div class="divider"></div>
+
+          <!-- add money form start -->
+          <div id="add-money-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <!-- input: Add money -->
+                <input id="input-add-money" type="text" placeholder="Add Money" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <!-- input: pin  -->
+                <input id="input-pin-number" type="password" placeholder="Pin Number" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- add money form end -->
+
+          <!-- cash out start -->
+          <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <!-- input: Add money -->
+                <input id="input-cash-out" type="text" placeholder="Cash Out Money" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <!-- input: pin  -->
+                <input id="cash-out-pin" type="password" placeholder="Pin Number" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+          <!-- cash out ends -->
+
+          <!-- transfer money starts -->
+          <div id="transfer-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <!-- input: Add money -->
+                <input id="input-transfer-input" type="text" placeholder="Transfer Money" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <!-- input: pin  -->
+                <input id="transfer-money-pin" type="password" placeholder="Pin Number" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-transfer-money" class="btn btn-primary">Transfer</button>
+              </div>
+            </form>
+          </div>
+          <!-- transfer money ends -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- practice purpose js file -->
+  <!-- <script src="./js/home.js"></script> -->
+
+
+  <!-- main js file for adding money -->
+  <script src="./js/addMoney.js"></script>
+
+  <!-- cash out Script file -->
+  <script src="./js/cashOut.js"></script>
+
+  <!-- transfer money file -->
+   <script src="./js/transferMoney.js"></script>
+
+  <!-- Payooo Features -->
+   <script src="./js/features.js"></script>
+
+
+</body>
+
+</html>
